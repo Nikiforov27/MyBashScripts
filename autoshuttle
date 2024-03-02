@@ -1,0 +1,10 @@
+#!/usr/bin/sh
+
+#sshuttle --dns -vNr root@94.228.169.26 0.0.0.0/0 -x 94.228.169.26/32
+
+echo "Which a user for sshuttle proxy ?"
+read sshut_user
+echo "Which the IP ?"
+read sshut_ip
+
+sshuttle --dns -vNr $sshut_user@$sshut_ip 0.0.0.0/0 -x $sshut_ip/32
